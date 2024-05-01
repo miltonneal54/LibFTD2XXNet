@@ -1,2 +1,3 @@
 # LibFTD2XXNet
-C# Wrapper Class for FTDI FTD2XX Library
+C# Wrapper Class for FTDI FTD2XX Library.
+The FTDI's driver FTD2xx must be installed on your system. (ftd2xx.dll)
