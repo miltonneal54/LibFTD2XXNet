@@ -1,0 +1,41 @@
+/// <summary>
+        /// Gets information on all of the FTDI devices available.  
+        /// </summary>
+        /// <param name="deviceList">An array of type FT_DEVICE_INFO_NODE to contain the device information for all available devices.</param>
+        /// <returns>FT_STATUS value from FT_GetDeviceInfoDetail in FTD2XX.DLL</returns>
+        /// <exception cref="FT_Exception">Thrown when the supplied buffer is not large enough to contain the device info list.</exception>
+        public FT_STATUS GetDeviceInfoDetail(FT_DEVICE_INFO_NODE[] deviceList)
+        {
+            uint deviceCount = 0;
+            byte[] serialNumber = new byte[16];
+            byte[] description = new byte[64];
+
+            FT_STATUS status = FT_STATUS.FT_OTHER_ERROR;
+            FT_ERROR errorCondition = FT_ERROR.FT_NO_ERROR;
+
+            status = FTDI_API.FT_CreateDeviceInfoList(ref deviceCount);
+
+            if (deviceCount > 0)
+            {
+                if (deviceList.Length < deviceCount)
+                {
+                    // Buffer not big enough, throw an exception.
+                    errorCondition = FT_ERROR.FT_BUFFER_SIZE;
+                    ErrorHandler(status, errorCondition);
+                }
+
+                for (uint index = 0; index < deviceCount; index++)
+                {
+                    deviceList[index] = new FT_DEVICE_INFO_NODE();
+                    status = FTDI_API.FT_GetDeviceInfoDetail(index, ref deviceList[index].Flags,
+                                                             ref deviceList[index].Type, ref deviceList[index].ID,
+                                                             ref deviceList[index].LocId, serialNumber, description,
+                                                             ref deviceList[index].Handle);
+
+                    deviceList[index].SerialNumber = GetString(serialNumber);
+                    deviceList[index].Description = GetString(description);
+                }
+            }
+
+            return status;
+        }

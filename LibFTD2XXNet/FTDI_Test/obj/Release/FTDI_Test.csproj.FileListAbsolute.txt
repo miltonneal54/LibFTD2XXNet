@@ -1,0 +1,10 @@
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\bin\Release\ConsoleApp1.exe.config
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\bin\Release\ConsoleApp1.exe
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\bin\Release\ConsoleApp1.pdb
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\bin\Release\LibFTD2XXNet.dll
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\bin\Release\LibFTD2XXNet.pdb
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\obj\Release\FTDI_Test.csproj.AssemblyReference.cache
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\obj\Release\FTDI_Test.csproj.CoreCompileInputs.cache
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\obj\Release\FTDI_Test.csproj.CopyComplete
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\obj\Release\ConsoleApp1.exe
+C:\Users\Milton\source\repos\C#\LilFTD2XXNet\ConsoleApp1\obj\Release\ConsoleApp1.pdb
